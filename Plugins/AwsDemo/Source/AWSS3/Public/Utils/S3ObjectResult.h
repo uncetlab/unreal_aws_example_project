@@ -9,13 +9,15 @@ struct FS3ObjectResult {
 	GENERATED_BODY()
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AWS S3")
-	FString BucketName;
+	FString Bucket;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AWS S3")
 	FString FileLocation;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AWS S3")
-	FString S3Key;
+	FString Key;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AWS S3")
+	bool wasSuccessful;
 	
 };
-

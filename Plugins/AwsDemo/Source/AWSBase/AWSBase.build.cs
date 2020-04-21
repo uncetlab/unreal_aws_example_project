@@ -14,10 +14,10 @@ public class AWSBase : ModuleRules{
         PublicDefinitions.Add("USE_IMPORT_EXPORT");
 
         if (Target.Platform == UnrealTargetPlatform.Android || Target.Platform == UnrealTargetPlatform.Win64){
-           
+            PublicDefinitions.Add("WITH_BASE=1");
         }
         else{
-        
+            PublicDefinitions.Add("WITH_BASE=0");
         }
     }
 }

@@ -3,7 +3,7 @@
 	"Version": 1,
 	"VersionName": "1.0",
 	"FriendlyName": "AwsDemo",
-	"Description": "A demo render of the aws plugin",
+	"Description": "this is a demo aws plugin",
 	"Category": "Other",
 	"CreatedBy": "Reese Innovation Lab",
 	"CreatedByURL": "https://www.reeseinnovate.com/",
@@ -31,7 +31,16 @@
 				"Win64",
 				"Android"
 			]
-		}
+		},
+		{
+			"Name": "AWSSQS",
+			"Type": "Runtime",
+			"LoadingPhase": "PreDefault",
+			"WhitelistPlatforms": [
+				"Win64",
+				"Android"
+			]
+		},
 		
 	]
 }

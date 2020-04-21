@@ -9,27 +9,11 @@ public class AWSS3 : ModuleRules
 
         bEnableExceptions = true;
 
-        PublicDependencyModuleNames.AddRange(new string[] { "Engine", "Core", "CoreUObject", "InputCore", "Projects", "AWSBase", "BaseTPLibrary" ,"S3TPModule", });
+        PublicDependencyModuleNames.AddRange(new string[] { "Engine", "Core", "CoreUObject", "InputCore", "Projects", "AWSBase", "BaseTPLibrary",  "S3TPModule", });
         PrivateDependencyModuleNames.AddRange(new string[] { });
 
         PublicIncludePaths.Add(Path.Combine(ModuleDirectory, "Public"));
         PrivateIncludePaths.Add(Path.Combine(ModuleDirectory, "Private"));
 
-
-        if (Target.Type != TargetRules.TargetType.Server)
-        {
-            if (Target.Platform == UnrealTargetPlatform.Android || Target.Platform == UnrealTargetPlatform.Win64)
-            {
-                PublicDefinitions.Add("WITH_s3=1");
-            }
-            else
-            {
-                PublicDefinitions.Add("WITH_s3=0");
-            }
-        }
-        else
-        {
-           PublicDefinitions.Add("WITH_s3=0");
-        }
     }
 }
